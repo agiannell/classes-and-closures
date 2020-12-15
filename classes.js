@@ -170,11 +170,12 @@ class Machine {
   }
 
   reboot(){
-    return function(){
-      this.wear_and_tear_count = this.wear_and_tear_count - 10;
+    return () => {
+      this.wear_and_tear_count -= 10;
       this.needs_reboot = false;
     }
   }
 }
+
 
 
